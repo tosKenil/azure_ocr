@@ -151,4 +151,8 @@ app.post("/ocr", upload.single("pdf"), async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.json({ message: `Welcome to azure OCR api.` });
+})
+
 app.listen(3000, () => console.log("Server running on port 3000"));
